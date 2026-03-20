@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
+import useFetchNews from "../hooks/useFetchNews";
+import CardContainerShimmer from "../utils/CardContainerShimmer";
+import CardContainer from "./CardContainer";
 
 const Business = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+	const articles = useFetchNews("business");
+	if (articles == null) return <CardContainerShimmer />;
 
-export default Business
+	console.log(articles);
+	return (
+		<div>
+			<CardContainer articles={articles} />
+		</div>
+	);
+};
+
+export default Business;

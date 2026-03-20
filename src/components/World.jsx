@@ -3,8 +3,8 @@ import useFetchNews from "../hooks/useFetchNews";
 import CardContainer from "./CardContainer";
 import CardContainerShimmer from "../utils/CardContainerShimmer";
 
-const Tech = () => {
-	const articles = useFetchNews("tech");
+const World = () => {
+	const articles = useFetchNews("world");
 	if (articles == null) return <CardContainerShimmer />;
 	console.log(articles);
 	return (
@@ -14,4 +14,4 @@ const Tech = () => {
 	);
 };
 
-export default Tech;
+export default World;
