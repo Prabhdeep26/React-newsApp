@@ -15,7 +15,7 @@ const useFetchNews = (query) => {
 	};
 	useEffect(() => {
 		fetchNews();
-	}, []);
+	}, [query]);
 
 	return result;
 };

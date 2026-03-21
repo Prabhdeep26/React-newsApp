@@ -9,6 +9,7 @@ import Business from "./components/Business";
 import Tech from "./components/Tech";
 import Science from "./components/Science";
 import Sports from "./components/Sports";
+import SearchPage from "./components/SearchPage";
 
 const appConfig = createBrowserRouter([
 	{
@@ -43,6 +44,11 @@ const appConfig = createBrowserRouter([
 				path: "/sports",
 				element: <Sports />,
 			},
+			{
+				path: "/search",
+				element: <SearchPage />,
+			},
+
 		],
 	},
 ]);
