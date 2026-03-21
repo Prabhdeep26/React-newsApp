@@ -5,6 +5,7 @@ A sleek, responsive news aggregator built with React.js that delivers real-time 
 # Real-time Data: Fetches the latest headlines using the News API.
 # Category Filtering: Users can browse news by specific topics (Tech, Science, Sports, etc.).
 # Mobile-First Design: Fully responsive UI optimized for all screen sizes.
+# Search Functionality: Quickly find articles based on keywords.
 
 🛠️ Tech Stack
 # Frontend: React.js 
