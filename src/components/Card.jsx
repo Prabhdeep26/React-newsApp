@@ -16,7 +16,6 @@ const Card = ({ article }) => {
 	};
 	return (
 		<div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col">
-			{/* Article Image */}
 			<div className="h-48 w-full overflow-hidden">
 				<img
 					src={
@@ -30,10 +29,8 @@ const Card = ({ article }) => {
 			</div>
 
 			<div className="p-5 flex flex-col grow">
-				{/* Source Header */}
 				<div className="flex items-center gap-2 mb-3">
 					<div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center">
-						{/* Small placeholder for source icon */}
 						<span className="text-[10px] font-bold text-orange-600">
 							{source?.name?.charAt(0)}
 						</span>
@@ -43,7 +40,6 @@ const Card = ({ article }) => {
 					</span>
 				</div>
 
-				{/* Title & Description */}
 				<h3 className="text-lg font-bold text-gray-900 leading-tight mb-2 line-clamp-2">
 					{title}
 				</h3>
@@ -51,7 +47,6 @@ const Card = ({ article }) => {
 					{description}
 				</p>
 
-				{/* Footer: Author & Time */}
 				<div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
 					<div className="flex items-center gap-2">
 						<div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
@@ -74,22 +69,3 @@ const Card = ({ article }) => {
 };
 
 export default Card;
-// return (
-// 		<div className="border-b border-gray-100 pb-4 last:border-0">
-// 			<div className="text-xs font-semibold text-gray-500 mb-1">
-// 				{source?.name || "Unknown Source"}
-// 			</div>
-// 			<h3 className="font-bold text-gray-900 text-base mb-1 line-clamp-2">
-// 				{title}
-// 			</h3>
-// 			<p className="text-gray-600 text-sm mb-2 line-clamp-2">
-// 				{description || "No description available"}
-// 			</p>
-// 			<div className="flex items-center text-xs text-gray-400">
-// 				<span className="mr-3">
-// 					📅 {author || source?.name || "Unknown"}
-// 				</span>
-// 				<span>{getTimeAgo(publishedAt)}</span>
-// 			</div>
-// 		</div>
-// 	);

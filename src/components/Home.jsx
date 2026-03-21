@@ -6,7 +6,6 @@ import CardContainerShimmer from "../utils/CardContainerShimmer";
 const Home = () => {
 	const articles = useFetchNews("latest");
 	if (articles == null) return <CardContainerShimmer />;
-	console.log(articles);
 	return (
 		<div>
 			<CardContainer articles={articles} />

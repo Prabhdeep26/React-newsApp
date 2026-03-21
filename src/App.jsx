@@ -48,7 +48,6 @@ const appConfig = createBrowserRouter([
 				path: "/search",
 				element: <SearchPage />,
 			},
-
 		],
 	},
 ]);

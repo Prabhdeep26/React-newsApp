@@ -7,7 +7,6 @@ const Politics = () => {
 	const articles = useFetchNews("politics");
 	if (articles == null) return <CardContainerShimmer />;
 
-	console.log(articles);
 	return (
 		<div>
 			<CardContainer articles={articles} />

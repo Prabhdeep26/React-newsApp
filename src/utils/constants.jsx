@@ -1,7 +1,12 @@
-// Get today's date in YYYY-MM-DD format
-const today = new Date().toISOString().split("T")[0];
+const date = new Date();
+
+date.setDate(date.getDate() - 1);
+
+const yesterday = date.toISOString().split("T")[0];
 
 export const newsApi_BaseURL = 'https://newsapi.org/v2/everything?q="';
 
-// We use a Template Literal here to inject the 'today' variable
-export const newApi_filters = `"&from=${today}&sortBy=publishedAt&apiKey=`;
+// Use the 'yesterday' variable here
+export const newApi_filters = `"&from=${yesterday}&sortBy=publishedAt&apiKey=`;
+
+export const newSearchApiFilter = `"&sortBy=publishedAt&apiKey=`;
