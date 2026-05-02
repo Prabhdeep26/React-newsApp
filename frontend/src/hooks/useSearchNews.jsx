@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useFetchNews = (query) => {
+const useSearchNews = (query) => {
 	const [result, setResult] = useState(null);
 
 	const fetchNews = async () => {
@@ -21,4 +21,4 @@ const useFetchNews = (query) => {
 	return result;
 };
 
-export default useFetchNews;
+export default useSearchNews;
