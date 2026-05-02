@@ -1,20 +1,18 @@
 import { useEffect, useState } from "react";
-import { newApi_filters, newsApi_BaseURL } from "../utils/constants";
 
 const useFetchNews = (query) => {
 	const [result, setResult] = useState(null);
 	const fetchNews = async () => {
-		const data = await fetch(
-			newsApi_BaseURL +
-				query +
-				newApi_filters +
-				import.meta.env.VITE_NEWSAPI_KEY,
-		);
-		const json = await data.json();
+		const response = await fetch(`http://localhost:3000/api/news/${query}`, {
+			method: "GET",
+		});
+		const json = await response.json();
 		setResult(json.articles);
+		
 	};
 	useEffect(() => {
 		fetchNews();
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [query]);
 
 	return result;
