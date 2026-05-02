@@ -53,6 +53,10 @@ app.get("/api/search/:userQuery", async (req, res) => {
 	}
 });
 
+app.use("/", (req, res) => {
+	res.send("Everything working fine");
+});
+
 app.listen(3000, () => {
 	console.log("server is listening");
 });
