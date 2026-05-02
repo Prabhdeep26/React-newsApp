@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useFetchNews = (query) => {
 	const [result, setResult] = useState(null);
 	const fetchNews = async () => {
-		const response = await fetch(`http://localhost:3000/api/news/${query}`, {
+		const response = await fetch(`/api/news/${query}`, {
 			method: "GET",
 		});
 		const json = await response.json();

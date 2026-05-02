@@ -4,7 +4,7 @@ const useFetchNews = (query) => {
 	const [result, setResult] = useState(null);
 	
 	const fetchNews = async () => {
-		const response = await fetch(`http://localhost:3000/api/search/${encodeURIComponent(query)}`, {
+		const response = await fetch(`/api/search/${encodeURIComponent(query)}`, {
 			method: "GET",
 		});
 		const json = await response.json();

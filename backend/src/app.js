@@ -56,3 +56,5 @@ app.get("/api/search/:userQuery", async (req, res) => {
 app.listen(3000, () => {
 	console.log("server is listening");
 });
+
+module.exports = app;
